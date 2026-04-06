@@ -51,24 +51,20 @@ const FAQS = [
   { q: 'Qual a política de cancelamento?',               a: 'Cancelamentos com até 15 dias de antecedência têm reembolso integral. Dentro desse prazo, o valor é revertido em crédito para próximos eventos.' },
 ];
 
-// ----------------------------------------------------------
-// RENDER — BENEFÍCIOS
-// ----------------------------------------------------------
 function renderBenefits() {
-  const grid = document.getElementById('benefits-grid');
+  const grid = document.getElementById('benefits-list'); // ID atualizado
   if (!grid) return;
   grid.innerHTML = BENEFITS.map((b, i) => `
-    <div class="benefit-card reveal" style="transition-delay:${i * 0.08}s">
-      <div class="benefit-icon">${b.icon}</div>
-      <div class="benefit-title">${b.title}</div>
-      <div class="benefit-desc">${b.desc}</div>
+    <div class="benefit-item reveal" style="transition-delay:${i * 0.08}s">
+      <div class="benefit-icon-wrap">${b.icon}</div>
+      <div class="benefit-content">
+        <div class="benefit-title">${b.title}</div>
+        <div class="benefit-desc">${b.desc}</div>
+      </div>
     </div>
   `).join('');
 }
 
-// ----------------------------------------------------------
-// RENDER — PALESTRANTES
-// ----------------------------------------------------------
 function renderSpeakers() {
   const grid = document.getElementById('speakers-grid');
   if (!grid) return;
@@ -76,22 +72,19 @@ function renderSpeakers() {
     <div class="speaker-card reveal" style="transition-delay:${i * 0.1}s">
       <div class="speaker-avatar">${s.initials}</div>
       <div class="speaker-name">${s.name}</div>
-      <div class="speaker-co">${s.company}</div>
-      <div class="speaker-city">📍 ${s.city}</div>
-      <div class="speaker-desc">${s.desc}</div>
+      <div class="speaker-title">${s.company}</div>
+      <div class="speaker-location">📍 ${s.city}</div>
+      <div class="speaker-bio">${s.desc}</div>
     </div>
   `).join('');
 }
 
-// ----------------------------------------------------------
-// RENDER — PÚBLICO-ALVO
-// ----------------------------------------------------------
 function renderAudience() {
   const grid = document.getElementById('audience-grid');
   if (!grid) return;
   grid.innerHTML = AUDIENCE.map((a, i) => `
     <div class="audience-item reveal" style="transition-delay:${i * 0.07}s">
-      <div class="audience-check">✓</div>
+      <div class="audience-icon">✓</div>
       <span class="audience-label">${a}</span>
     </div>
   `).join('');
@@ -105,12 +98,12 @@ function renderFAQ() {
   if (!list) return;
   list.innerHTML = FAQS.map((f, i) => `
     <div class="faq-item reveal" style="transition-delay:${i * 0.07}s">
-      <button class="faq-question" onclick="toggleFAQ(${i})">
+      <button class="faq-q" onclick="toggleFAQ(${i})">
         ${f.q}
-        <span class="faq-icon" id="faq-icon-${i}">+</span>
+        <span class="faq-chevron" id="faq-icon-${i}">+</span>
       </button>
-      <div class="faq-answer" id="faq-answer-${i}">
-        <div class="faq-answer-inner">${f.a}</div>
+      <div class="faq-a" id="faq-answer-${i}">
+        <div class="faq-a-inner">${f.a}</div>
       </div>
     </div>
   `).join('');
@@ -118,16 +111,17 @@ function renderFAQ() {
 
 function toggleFAQ(i) {
   const answer = document.getElementById('faq-answer-' + i);
-  const icon   = document.getElementById('faq-icon-' + i);
+  const item   = answer.closest('.faq-item'); // O CSS novo usa .open no .faq-item pai também
   const isOpen = answer.classList.contains('open');
-  document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('open'));
-  document.querySelectorAll('.faq-icon').forEach(el => el.classList.remove('open'));
+  
+  document.querySelectorAll('.faq-a').forEach(el => el.classList.remove('open'));
+  document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+  
   if (!isOpen) {
     answer.classList.add('open');
-    icon.classList.add('open');
+    item.classList.add('open');
   }
 }
-
 // ----------------------------------------------------------
 // COUNTDOWN
 // ----------------------------------------------------------
@@ -165,23 +159,22 @@ function startCountdown() {
 
 function animateSpots() {
   var fill = document.getElementById('spots-fill');
-  var label = document.querySelector('.spots-label');
+  var countText = document.querySelector('.spots-count');
   if (!fill) return;
 
   fetch('https://agilizza-chat-backend-agilizza-evento-backend.xoduag.easypanel.host/api/vagas')
     .then(function(res) { return res.json(); })
     .then(function(data) {
-      var vendas = data.garantidas; // Removido o "78 +" para refletir apenas o BD real
+      var vendas = data.garantidas; 
       var total = data.total || 120;
       var restantes = total - vendas;
 
       if (restantes < 0) restantes = 0; 
-      
       var porcentagem = (vendas / total) * 100;
 
-      if (label) {
-        label.innerHTML = '<span><strong>' + vendas + ' vagas</strong> já garantidas</span>' +
-                          '<span style="color:var(--pink-light)">' + restantes + ' restantes</span>';
+      // Atualiza o texto das vagas garantidas na nova estrutura
+      if (countText) {
+        countText.innerHTML = `<strong>${vendas} vagas</strong> já garantidas`;
       }
 
       // Anima a barra
@@ -189,7 +182,6 @@ function animateSpots() {
     })
     .catch(function(err) {
       console.error('Erro ao buscar vagas do servidor:', err);
-      // Se der erro de rede, mantemos a barra no padrão visual
       setTimeout(function() { fill.style.width = '65%'; }, 400);
     });
 }
@@ -220,15 +212,13 @@ function selectTicket(type) {
 // ----------------------------------------------------------
 function selectTicketRadio(type) {
   ['geral', 'parceiro'].forEach(function(t) {
-    var radio = document.getElementById('radio-' + t);
+    var radio = document.getElementById('opt-' + t); // Mudou de radio- para opt-
     var dot   = document.getElementById('dot-' + t);
     if (radio) radio.classList.toggle('selected', t === type);
-    if (dot)   dot.classList.toggle('active', t === type);
+    if (dot)   dot.classList.toggle('on', t === type); // Mudou de active para on
   });
   var input = document.getElementById('selected-ticket');
   if (input) input.value = type;
-  var warning = document.getElementById('partner-warning');
-  if (warning) warning.style.display = type === 'parceiro' ? 'block' : 'none';
 }
 
 // ----------------------------------------------------------
@@ -239,7 +229,25 @@ function togglePartnerField() {
   var checked = document.getElementById('is-partner').checked;
   if (wrap) wrap.style.display = checked ? 'block' : 'none';
 }
+// ----------------------------------------------------------
+// TICKER ANIMADO
+// ----------------------------------------------------------
+function initTicker() {
+  const track = document.getElementById('ticker-track');
+  if (!track) return;
+  
+  const tickerItems = [
+    'Vagas limitadas', 'Sem transmissão online', '<strong>Florianópolis</strong>', '30 de Maio', 
+    'Networking VIP', 'Portabilidade', 'Compra de Dívida', 'Agilizza Promotora'
+  ];
 
+  const html = tickerItems.map(item => `
+    <div class="ticker-item"><div class="ticker-dot"></div>${item}</div>
+  `).join('');
+
+  // Duplica o conteúdo para fazer o loop perfeito no CSS
+  track.innerHTML = html + html + html + html; 
+}
 // ----------------------------------------------------------
 // INICIALIZAÇÃO GERAL + SUBMIT DO FORMULÁRIO
 // (um único DOMContentLoaded agrupa tudo)
@@ -252,6 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
   renderAudience();
   renderFAQ();
   startCountdown();
+  initTicker();
   animateSpots();
   setTimeout(initReveal, 150);
 
