@@ -275,13 +275,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var email       = document.getElementById('f-email').value.trim();
     var company     = document.getElementById('f-company').value.trim();
     var city        = document.getElementById('f-city').value.trim();
+    var cpf         = document.getElementById('f-cpf').value.trim();
     var ticket      = document.getElementById('selected-ticket').value;
     var isPartner   = document.getElementById('is-partner').checked;
     var codeEl      = document.getElementById('f-code');
     var partnerCode = codeEl ? codeEl.value.trim() : '';
 
     // Validação básica
-    if (!name || !whatsapp || !email || !company || !city) {
+    if (!name || !whatsapp || !email || !company || !city || !cpf) {
       errorEl.textContent   = 'Por favor, preencha todos os campos obrigatórios.';
       errorEl.style.display = 'block';
       return;
@@ -305,6 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
         email: email,
         company: company,
         city: city,
+        cpf: cpf,
         ticket: ticket,
         isPartner: isPartner,
         partnerCode: partnerCode
