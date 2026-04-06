@@ -206,15 +206,11 @@ nav.scrolled {
 .nav-brand {
   display: flex; align-items: center; gap: 12px;
 }
-.nav-logo-mark {
-  width: 32px; height: 32px;
-  background: var(--g-gold-subtle);
-  border-radius: var(--r-xs);
-  display: flex; align-items: center; justify-content: center;
-  font-size: .75rem;
-  font-weight: 800;
-  color: #1a0800;
-  letter-spacing: -0.5px;
+.nav-logo-img {
+  height: 36px; /* Altura ajustada para imagens */
+  width: auto; /* Mantém a proporção original da imagem */
+  max-width: 120px; /* Evita que a logo fique muito esticada horizontalmente */
+  object-fit: contain;
   flex-shrink: 0;
 }
 .nav-logo-text {
