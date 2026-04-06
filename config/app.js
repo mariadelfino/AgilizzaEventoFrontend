@@ -10,7 +10,7 @@
 // ----------------------------------------------------------
 // ENDPOINT DO BACKEND (VPS)
 // ----------------------------------------------------------
-const API_URL = 'https://https://agilizza-chat-backend-agilizza-evento-backend.xoduag.easypanel.host//api/checkout';
+const API_URL = 'https://agilizza-chat-backend-agilizza-evento-backend.xoduag.easypanel.host/api/checkout';
 
 // ----------------------------------------------------------
 // DADOS
@@ -168,7 +168,7 @@ function animateSpots() {
   var label = document.querySelector('.spots-label');
   if (!fill) return;
 
-  fetch('https://https://agilizza-chat-backend-agilizza-evento-backend.xoduag.easypanel.host//api/vagas')
+  fetch('https://agilizza-chat-backend-agilizza-evento-backend.xoduag.easypanel.host/api/vagas')
     .then(function(res) { return res.json(); })
     .then(function(data) {
       var vendas = data.garantidas; // Removido o "78 +" para refletir apenas o BD real
