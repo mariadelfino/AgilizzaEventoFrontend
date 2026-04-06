@@ -210,17 +210,26 @@ function selectTicket(type) {
 // ----------------------------------------------------------
 // SELEÇÃO DE INGRESSO NO FORMULÁRIO
 // ----------------------------------------------------------
+// ----------------------------------------------------------
+// SELEÇÃO DE INGRESSO NO FORMULÁRIO
+// ----------------------------------------------------------
 function selectTicketRadio(type) {
   ['geral', 'parceiro'].forEach(function(t) {
-    var radio = document.getElementById('opt-' + t); // Mudou de radio- para opt-
+    var radio = document.getElementById('opt-' + t); 
     var dot   = document.getElementById('dot-' + t);
     if (radio) radio.classList.toggle('selected', t === type);
-    if (dot)   dot.classList.toggle('on', t === type); // Mudou de active para on
+    if (dot)   dot.classList.toggle('on', t === type); 
   });
   var input = document.getElementById('selected-ticket');
   if (input) input.value = type;
-}
 
+  // Mostra ou oculta o campo de código automaticamente
+  var isPartnerCheckbox = document.getElementById('is-partner');
+  if (isPartnerCheckbox) {
+    isPartnerCheckbox.checked = (type === 'parceiro');
+    togglePartnerField();
+  }
+}
 // ----------------------------------------------------------
 // CAMPO CÓDIGO PARCEIRO
 // ----------------------------------------------------------
@@ -298,6 +307,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (!/\S+@\S+\.\S+/.test(email)) {
       errorEl.textContent   = 'E-mail inválido.';
+      errorEl.style.display = 'block';
+      return;
+    }
+    
+    // Validação do código de parceiro no frontend
+    if (ticket === 'parceiro' && !partnerCode) {
+      errorEl.textContent   = 'Por favor, insira seu Código Exclusivo de parceiro.';
       errorEl.style.display = 'block';
       return;
     }
