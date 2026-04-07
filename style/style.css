@@ -866,10 +866,11 @@ section { padding: clamp(72px, 10vh, 112px) clamp(16px, 5vw, 48px); }
   box-shadow: 0 0 20px rgba(245,158,11,0.25);
   transition: box-shadow 0.3s ease;
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: contain;
 }
 img.speaker-avatar {
   background: none;
+  object-fit: contain;
 }
 .speaker-card:hover .speaker-avatar { box-shadow: 0 0 36px rgba(245,158,11,.35); }
 
