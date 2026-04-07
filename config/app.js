@@ -25,10 +25,34 @@ const BENEFITS = [
 ];
 
 const SPEAKERS = [
-  { initials: 'RM', name: 'Ricardo Matos',   company: 'Agilizza Promotora',  city: 'Florianópolis - SC', desc: 'Especialista em portabilidade de crédito consignado com mais de 15 anos no mercado. Responsável por operações superiores a R$ 50M/ano.' },
-  { initials: 'CA', name: 'Carla Andrade',   company: 'Grupo Crédito Sul',   city: 'Porto Alegre - RS',  desc: 'Referência nacional em compra de dívida e refinanciamento INSS. Formou mais de 500 correspondentes em todo o Brasil.' },
-  { initials: 'FO', name: 'Felipe Oliveira', company: 'SIAPE Experts',       city: 'Brasília - DF',      desc: 'Autoridade em crédito SIAPE e estratégias para servidores públicos. Criador de metodologias de conversão aplicadas por grandes redes.' },
-  { initials: 'ML', name: 'Mariana Lima',    company: 'Top Corban Network',  city: 'Curitiba - PR',      desc: 'Gestora de equipes comerciais de alta performance no segmento consignado. Especialista em recrutamento e treinamento de corbans.' },
+  { 
+    image: 'style/anacarla_foto.jpg', 
+    name: 'Ana Carla Almeida', 
+    company: 'Sócia do Grupo Real', 
+    city: 'Florianópolis - SC', 
+    desc: 'Especialista em gestão, liderança e vendas. Responsável por estruturar empresas que saem do caos para crescimento previsível. Já contribuiu para mais de R$ 1 BILHÃO em vendas.<br><br><strong>Assunto da palestra:</strong> Bater meta não é sorte. É método.' 
+  },
+  { 
+    image: 'style/neverson_foto.jpg', 
+    name: 'Neverson Knies', 
+    company: 'Fundador da Gaúcha Cred', 
+    city: 'Florianópolis - SC', 
+    desc: 'Especialista em vendas por telefone e performance sob pressão. Construiu um time com mais de 50 vendedores ativos e já treinou mais de 200 profissionais do zero à alta performance.<br><br>Vivência prática em metas agressivas: seu maior vendedor já atingiu R$ 1.000.000,00 em vendas de cartão consignado num único mês.' 
+  },
+  { 
+    initials: 'RM', 
+    name: 'Ricardo Matos',   
+    company: 'Agilizza Promotora',  
+    city: 'Florianópolis - SC', 
+    desc: 'Especialista em portabilidade de crédito consignado com mais de 15 anos no mercado. Responsável por operações superiores a R$ 50M/ano.' 
+  },
+  { 
+    initials: 'FO', 
+    name: 'Felipe Oliveira', 
+    company: 'SIAPE Experts',       
+    city: 'Brasília - DF',      
+    desc: 'Autoridade em crédito SIAPE e estratégias para servidores públicos. Criador de metodologias de conversão aplicadas por grandes redes.' 
+  }
 ];
 
 const AUDIENCE = [
@@ -68,15 +92,28 @@ function renderBenefits() {
 function renderSpeakers() {
   const grid = document.getElementById('speakers-grid');
   if (!grid) return;
-  grid.innerHTML = SPEAKERS.map((s, i) => `
-    <div class="speaker-card reveal" style="transition-delay:${i * 0.1}s">
-      <div class="speaker-avatar">${s.initials}</div>
-      <div class="speaker-name">${s.name}</div>
-      <div class="speaker-title">${s.company}</div>
-      <div class="speaker-location">📍 ${s.city}</div>
-      <div class="speaker-bio">${s.desc}</div>
-    </div>
-  `).join('');
+  grid.innerHTML = SPEAKERS.map((s, i) => {
+    
+    // Verifica se o palestrante tem foto ou iniciais
+    const avatarHTML = s.image 
+      ? `<img src="${s.image}" alt="${s.name}" class="speaker-avatar" style="object-fit: cover; background: none;">` 
+      : `<div class="speaker-avatar">${s.initials}</div>`;
+
+    // Verifica se tem cidade cadastrada (para evitar erro de layout)
+    const locationHTML = s.city 
+      ? `<div class="speaker-location">📍 ${s.city}</div>` 
+      : '';
+
+    return `
+      <div class="speaker-card reveal" style="transition-delay:${i * 0.1}s">
+        ${avatarHTML}
+        <div class="speaker-name">${s.name}</div>
+        <div class="speaker-title">${s.company}</div>
+        ${locationHTML}
+        <div class="speaker-bio">${s.desc}</div>
+      </div>
+    `;
+  }).join('');
 }
 
 function renderAudience() {
