@@ -855,6 +855,12 @@ section { padding: clamp(72px, 10vh, 112px) clamp(16px, 5vw, 48px); }
 }
 .speaker-card:hover .speaker-avatar { box-shadow: 0 0 32px rgba(245,158,11,.2); }
 
+/* Nova regra para ajustar as fotos perfeitamente no círculo */
+img.speaker-avatar {
+  object-fit: cover;
+  background: none;
+}
+
 .speaker-number {
   position: absolute;
   top: 20px; right: 20px;
