@@ -1,555 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portabilidade na Prática 2.0 + Compra de Dívida — Evento presencial para correspondentes bancários e promotoras de crédito. Florianópolis, 30/05/2026." />
-  <title>Portabilidade na Prática 2.0 | Agilizza Promotora</title>
-  
-  <link rel="icon" type="image/png" href="style/logo-agilizza.png" />
-  
-  <link rel="stylesheet" href="style/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portabilidade na Prática 2.0 + Compra de Dívida — Evento presencial para correspondentes bancários e promotoras de crédito. Florianópolis, 30/05/2026." />
+  <title>Portabilidade na Prática 2.0 | Agilizza Promotora</title>
+  
+  <link rel="icon" type="image/png" href="style/logo-agilizza.png" />
+  
+  <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
 
-  <nav id="main-nav">
-    <div class="nav-brand">
-      <img src="style/logo-agilizza.png" alt="Logo Agilizza" class="nav-logo-img" />
-      <div class="nav-logo-text">
-        Agilizza <span style="color:var(--gold-600)">Promotora</span>
-        <span class="nav-logo-sub">Evento • 30 Mai 2026</span>
-      </div>
-    </div>
-    <div class="nav-right">
-      <span class="nav-date">Florianópolis · SC</span>
-      <button class="nav-cta" onclick="scrollToForm()">Garantir Vaga</button>
-    </div>
-  </nav>
+  <nav id="main-nav">
+    <div class="nav-brand">
+      <img src="style/logo-agilizza.png" alt="Logo Agilizza" class="nav-logo-img" />
+      <div class="nav-logo-text">
+        Agilizza <span style="color:var(--gold-600)">Promotora</span>
+        <span class="nav-logo-sub">Evento &bull; 30 Mai 2026</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <span class="nav-date">Florianópolis · SC</span>
+      <button class="nav-cta" onclick="scrollToForm()">Garantir Vaga</button>
+    </div>
+  </nav>
 
-    <div class="ticker-wrap">
-    <div class="ticker-track" id="ticker-track">
-          </div>
-  </div>
+  <!-- ═══════════════ TICKER ═══════════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="ticker-track">
+      <!-- JS duplicates for seamless loop -->
+    </div>
+  </div>
 
-    <section class="hero" id="inicio">
-    <div class="hero-orb orb-a"></div>
-    <div class="hero-orb orb-b"></div>
-    <div class="hero-ring hero-ring-1"></div>
-    <div class="hero-ring hero-ring-2"></div>
-    <div class="hero-ring hero-ring-3"></div>
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero-orb orb-a"></div>
+    <div class="hero-orb orb-b"></div>
+    <div class="hero-ring hero-ring-1"></div>
+    <div class="hero-ring hero-ring-2"></div>
+    <div class="hero-ring hero-ring-3"></div>
 
-    <div class="hero-inner">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        <span class="eyebrow-label">Evento Presencial Exclusivo</span>
-        <span class="eyebrow-pill">120 Vagas</span>
-      </div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span class="eyebrow-label">Evento Presencial Exclusivo</span>
+        <span class="eyebrow-pill">120 Vagas</span>
+      </div>
 
-      <h1 class="hero-title">
-        <span class="event-super">Agilizza Promotora apresenta</span>
-        <span class="gold-text">Portabilidade</span><br>
-        na Prática <span class="gold-text-light">2.0</span>
-        <br>
-        <span class="plus-connector">+</span>
-        <br>
-        <span class="gold-text-soft">Compra de Dívida</span>
-      </h1>
+      <h1 class="hero-title">
+        <span class="event-super">Agilizza Promotora apresenta</span>
+        <span class="gold-text">Portabilidade</span><br>
+        na Prática <span class="gold-text-light">2.0</span>
+        <br>
+        <span class="plus-connector">+</span>
+        <br>
+        <span class="gold-text-soft">Compra de Dívida</span>
+      </h1>
 
-      <p class="hero-subtitle">
-        O evento mais <strong>direto ao ponto</strong> do mercado consignado.
-        Aprenda com quem fatura milhões — e aplique no dia seguinte.
-      </p>
+      <p class="hero-subtitle">
+        O evento mais <strong>direto ao ponto</strong> do mercado consignado.
+        Aprenda com quem fatura milhões — e aplique no dia seguinte.
+      </p>
 
-      <div class="hero-info-strip">
-        <div class="info-chip">
-          <div class="info-chip-icon">📅</div>
-          30 de Maio de 2026
-        </div>
-        <div class="info-chip">
-          <div class="info-chip-icon">🕘</div>
-          A partir das 09h00
-        </div>
-        <div class="info-chip">
-          <div class="info-chip-icon">📍</div>
-          Majestic Palace Hotel · Florianópolis
-        </div>
-        <div class="info-chip">
-          <div class="info-chip-icon">👥</div>
-          120 vagas totais
-        </div>
-      </div>
+      <div class="hero-info-strip">
+        <div class="info-chip">
+          <div class="info-chip-icon">📅</div>
+          30 de Maio de 2026
+        </div>
+        <div class="info-chip">
+          <div class="info-chip-icon">🕘</div>
+          A partir das 09h00
+        </div>
+        <div class="info-chip">
+          <div class="info-chip-icon">📍</div>
+          Majestic Palace Hotel · Florianópolis
+        </div>
+        <div class="info-chip">
+          <div class="info-chip-icon">👥</div>
+          120 vagas totais
+        </div>
+      </div>
 
-      <div class="hero-cta-group">
-        <button class="btn-primary" onclick="scrollToForm()">
-          Garantir Minha Vaga →
-        </button>
-        <button class="btn-secondary" onclick="document.getElementById('beneficios').scrollIntoView({behavior:'smooth'})">
-          Ver Programação
-        </button>
-      </div>
+      <div class="hero-cta-group">
+        <button class="btn-primary" onclick="scrollToForm()">
+          Garantir Minha Vaga →
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('beneficios').scrollIntoView({behavior:'smooth'})">
+          Ver Programação
+        </button>
+      </div>
 
-      <div class="hero-scarcity">
-        <span class="scarcity-line"></span>
-        Vagas limitadas — não deixe para depois
-        <span class="scarcity-line"></span>
-      </div>
-    </div>
-  </section>
+      <div class="hero-scarcity">
+        <span class="scarcity-line"></span>
+        Vagas limitadas — não deixe para depois
+        <span class="scarcity-line"></span>
+      </div>
+    </div>
+  </section>
 
-    <div class="countdown-section">
-    <div class="countdown-wrap">
-      <div class="countdown-eyebrow">⏳   O evento começa em</div>
-      <div class="countdown-timer">
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-days">00</span>
-          <div class="countdown-lbl">Dias</div>
-        </div>
-        <div class="countdown-colon">:</div>
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-hours">00</span>
-          <div class="countdown-lbl">Horas</div>
-        </div>
-        <div class="countdown-colon">:</div>
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-minutes">00</span>
-          <div class="countdown-lbl">Min</div>
-        </div>
-        <div class="countdown-colon">:</div>
-        <div class="countdown-unit">
-          <span class="countdown-num" id="cd-seconds">00</span>
-          <div class="countdown-lbl">Seg</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- ═══════════════ COUNTDOWN ═══════════════ -->
+  <div class="countdown-section">
+    <div class="countdown-wrap">
+      <div class="countdown-eyebrow">⏳ &nbsp; O evento começa em</div>
+      <div class="countdown-timer">
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-days">00</span>
+          <div class="countdown-lbl">Dias</div>
+        </div>
+        <div class="countdown-colon">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <div class="countdown-lbl">Horas</div>
+        </div>
+        <div class="countdown-colon">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-minutes">00</span>
+          <div class="countdown-lbl">Min</div>
+        </div>
+        <div class="countdown-colon">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-seconds">00</span>
+          <div class="countdown-lbl">Seg</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section id="beneficios" class="benefits-section">
-    <div class="container">
-      <div class="benefits-layout">
+  <!-- ═══════════════ BENEFÍCIOS ═══════════════ -->
+  <section id="beneficios" class="benefits-section">
+    <div class="container">
+      <div class="benefits-layout">
 
-        <div class="benefits-intro reveal">
-          <div class="section-eyebrow">
-            <span class="eyebrow-line"></span>
-            <span class="eyebrow-text">Conteúdo</span>
-          </div>
-          <h2 class="section-title">
-            Aprenda o que <span class="gold-text">move o ponteiro</span><br>da sua produção
-          </h2>
-          <p class="section-sub">
-            Sem teoria vaga. Cada módulo foi desenhado para quem quer resultados
-            reais no mercado de crédito consignado a partir do dia seguinte ao evento.
-          </p>
-          <div style="margin-top: 32px;">
-            <button class="btn-primary" onclick="scrollToForm()" style="font-size:.78rem;padding:14px 26px;">
-              Quero Aprender →
-            </button>
-          </div>
-        </div>
+        <div class="benefits-intro reveal">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">Conteúdo</span>
+          </div>
+          <h2 class="section-title">
+            Aprenda o que <span class="gold-text">move o ponteiro</span><br>da sua produção
+          </h2>
+          <p class="section-sub">
+            Sem teoria vaga. Cada módulo foi desenhado para quem quer resultados
+            reais no mercado de crédito consignado a partir do dia seguinte ao evento.
+          </p>
+          <div style="margin-top: 32px;">
+            <button class="btn-primary" onclick="scrollToForm()" style="font-size:.78rem;padding:14px 26px;">
+              Quero Aprender →
+            </button>
+          </div>
+        </div>
 
-        <div class="benefits-list" id="benefits-list">
-                  </div>
+        <div class="benefits-list" id="benefits-list">
+          <!-- JS injected -->
+        </div>
 
-      </div>
-    </div>
-  </section>
+      </div>
+    </div>
+  </section>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section class="speakers-section">
-    <div class="container">
-      <div class="reveal text-center">
-        <div class="section-eyebrow" style="justify-content:center">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Palestrantes</span>
-          <span class="eyebrow-line"></span>
-        </div>
-        <h2 class="section-title">
-          Aprenda com quem <span class="gold-text-soft">fatura milhões</span>
-        </h2>
-        <p class="section-sub" style="margin: 0 auto;">
-          Experiência de campo — nenhuma teoria sem prática.
-        </p>
-      </div>
-      <div class="speakers-grid" id="speakers-grid">
-        
-        <div class="speaker-card reveal">
-          <img src="anacarla_foto.png" alt="Ana Carla Almeida" class="speaker-img" />
-          <h3 class="speaker-name">Ana Carla Almeida</h3>
-          <div class="speaker-desc">
-            <p>Sócia do Grupo Real</p>
-            <p>Especialista em gestão, liderança e vendas</p>
-            <p>Responsável por estruturar empresas que saem do caos para crescimento previsível</p>
-            <p>Já contribuiu para mais de R$ 1 BILHÃO em vendas</p>
-            <p><strong>Assunto da palestra:</strong> Bater meta não é sorte. É método.</p>
-          </div>
-        </div>
+  <!-- ═══════════════ PALESTRANTES ═══════════════ -->
+  <section class="speakers-section">
+    <div class="container">
+      <div class="reveal text-center">
+        <div class="section-eyebrow" style="justify-content:center">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Palestrantes</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">
+          Aprenda com quem <span class="gold-text-soft">fatura milhões</span>
+        </h2>
+        <p class="section-sub" style="margin: 0 auto;">
+          Experiência de campo — nenhuma teoria sem prática.
+        </p>
+      </div>
+      <div class="speakers-grid" id="speakers-grid">
+        <!-- JS injected -->
+      </div>
+    </div>
+  </section>
 
-        <div class="speaker-card reveal">
-          <img src="neverson_foto.png" alt="Neverson Knies" class="speaker-img" />
-          <h3 class="speaker-name">Neverson Knies</h3>
-          <div class="speaker-desc">
-            <p>Empresário e fundador da Gaúcha Cred.</p>
-            <p>Especialista em vendas por telefone, gestão de equipes e performance sob pressão.</p>
-            <p>Construiu um time com mais de 50 vendedores ativos.</p>
-            <p>Atua diariamente no campo, liderando uma operação real de vendas.</p>
-            <p>Já treinou e liderou mais de 200 vendedores.</p>
-            <p>Responsável por desenvolver profissionais do zero até alta performance.</p>
-            <p>Vivência prática em metas agressivas, cobrança, rotina intensa e resultado constante.</p>
-            <p>Seu maior vendedor já atingiu R$ 1.000.000,00 em vendas de cartão consignado em um único mês.</p>
-          </div>
-        </div>
+  <div class="divider"></div>
 
-      </div>
-    </div>
-  </section>
+  <!-- ═══════════════ PÚBLICO-ALVO ═══════════════ -->
+  <section id="publico" class="audience-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Para Quem É</span>
+        </div>
+        <h2 class="section-title">
+          Se você atua em <span class="gold-text-light">crédito consignado</span>,<br>
+          este evento é para você
+        </h2>
+        <p class="section-sub">
+          Quem estiver neste evento vai sair na frente. Sem exceção.
+        </p>
+      </div>
+      <div class="audience-grid" id="audience-grid">
+        <!-- JS injected -->
+      </div>
+    </div>
+  </section>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section id="publico" class="audience-section">
-    <div class="container">
-      <div class="reveal">
-        <div class="section-eyebrow">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Para Quem É</span>
-        </div>
-        <h2 class="section-title">
-          Se você atua em <span class="gold-text-light">crédito consignado</span>,<br>
-          este evento é para você
-        </h2>
-        <p class="section-sub">
-          Quem estiver neste evento vai sair na frente. Sem exceção.
-        </p>
-      </div>
-      <div class="audience-grid" id="audience-grid">
-              </div>
-    </div>
-  </section>
+  <!-- ═══════════════ INGRESSOS ═══════════════ -->
+  <section id="ingressos" class="tickets-section">
+    <div class="container tickets-container">
 
-  <div class="divider"></div>
+      <div class="reveal text-center">
+        <div class="section-eyebrow" style="justify-content:center">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Ingressos</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">Escolha sua <span class="gold-text">modalidade</span></h2>
+        <p class="section-sub" style="margin:0 auto;">Vagas limitadas a 120 pessoas. Não existe segunda chamada.</p>
+      </div>
 
-    <section id="ingressos" class="tickets-section">
-    <div class="container tickets-container">
+      <div class="spots-bar reveal">
+        <div class="spots-text"><span class="spots-count">Vagas disponíveis:</span></div>
+        <div class="spots-track">
+          <div class="spots-fill" id="spots-fill"></div>
+        </div>
+        <div class="spots-text"><span class="spots-total">120 no total</span></div>
+      </div>
 
-      <div class="reveal text-center">
-        <div class="section-eyebrow" style="justify-content:center">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Ingressos</span>
-          <span class="eyebrow-line"></span>
-        </div>
-        <h2 class="section-title">Escolha sua <span class="gold-text">modalidade</span></h2>
-        <p class="section-sub" style="margin:0 auto;">Vagas limitadas a 120 pessoas. Não existe segunda chamada.</p>
-      </div>
+      <div class="tickets-grid">
 
-      <div class="spots-bar reveal">
-        <div class="spots-text"><span class="spots-count">Vagas disponíveis:</span></div>
-        <div class="spots-track">
-          <div class="spots-fill" id="spots-fill"></div>
-        </div>
-        <div class="spots-text"><span class="spots-total">120 no total</span></div>
-      </div>
+        <div class="ticket-card reveal">
+          <div class="ticket-tier">Ingresso</div>
+          <div class="ticket-name">Público Geral</div>
+          <div class="ticket-price-wrap">
+            <div class="ticket-price">
+              <span class="ticket-price-cur">R$</span>
+              <span class="ticket-price-main">297</span>
+              <span class="ticket-price-cents">,90</span>
+            </div>
+          </div>
+          <div class="ticket-divider"></div>
+          <ul class="ticket-features">
+            <li class="ticket-feature"><span class="feature-check">✦</span> Acesso ao evento completo</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Coffee break incluso</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Material digital de apoio</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Certificado de participação</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Networking qualificado</li>
+          </ul>
+          <button class="btn-ticket btn-ticket-outline" onclick="selectTicket('geral')">
+            Comprar Ingresso →
+          </button>
+        </div>
 
-      <div class="tickets-grid">
+        <div class="ticket-card featured reveal reveal-delay-1">
+          <div class="ticket-badge-wrap">
+            <div class="ticket-badge">Mais Vantajoso</div>
+          </div>
+          <div class="ticket-tier">Ingresso</div>
+          <div class="ticket-name">Parceiro <span class="gold-text-soft">Agilizza</span></div>
+          <div class="ticket-price-wrap">
+            <div class="ticket-price">
+              <span class="ticket-price-cur">R$</span>
+              <span class="ticket-price-main">167</span>
+              <span class="ticket-price-cents">,00</span>
+            </div>
+            <span class="ticket-price-from">de R$ 297,90</span>
+          </div>
+          <div class="ticket-divider"></div>
+          <ul class="ticket-features">
+            <li class="ticket-feature"><span class="feature-check">✦</span> Acesso ao evento completo</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Coffee break incluso</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Material digital de apoio</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Certificado de participação</li>
+            <li class="ticket-feature"><span class="feature-check">✦</span> Networking qualificado</li>
+            <li class="ticket-feature"><span class="feature-star">★</span> <strong>Prioridade no assento</strong></li>
+          </ul>
+          <div class="ticket-notice">
+            ⚠️ <strong>Exclusivo para parceiros com produção ativa.</strong>
+            Sujeito à validação pela equipe comercial.
+          </div>
+          <button class="btn-ticket btn-ticket-gold" onclick="selectTicket('parceiro')">
+            Garantir Vaga com Desconto →
+          </button>
+        </div>
 
-        <div class="ticket-card reveal">
-          <div class="ticket-tier">Ingresso</div>
-          <div class="ticket-name">Público Geral</div>
-          <div class="ticket-price-wrap">
-            <div class="ticket-price">
-              <span class="ticket-price-cur">R$</span>
-              <span class="ticket-price-main">297</span>
-              <span class="ticket-price-cents">,90</span>
-            </div>
-          </div>
-          <div class="ticket-divider"></div>
-          <ul class="ticket-features">
-            <li class="ticket-feature"><span class="feature-check">✦</span> Acesso ao evento completo</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Coffee break incluso</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Material digital de apoio</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Certificado de participação</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Networking qualificado</li>
-          </ul>
-          <button class="btn-ticket btn-ticket-outline" onclick="selectTicket('geral')">
-            Comprar Ingresso →
-          </button>
-        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="ticket-card featured reveal reveal-delay-1">
-          <div class="ticket-badge-wrap">
-            <div class="ticket-badge">Mais Vantajoso</div>
-          </div>
-          <div class="ticket-tier">Ingresso</div>
-          <div class="ticket-name">Parceiro <span class="gold-text-soft">Agilizza</span></div>
-          <div class="ticket-price-wrap">
-            <div class="ticket-price">
-              <span class="ticket-price-cur">R$</span>
-              <span class="ticket-price-main">167</span>
-              <span class="ticket-price-cents">,00</span>
-            </div>
-            <span class="ticket-price-from">de R$ 297,90</span>
-          </div>
-          <div class="ticket-divider"></div>
-          <ul class="ticket-features">
-            <li class="ticket-feature"><span class="feature-check">✦</span> Acesso ao evento completo</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Coffee break incluso</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Material digital de apoio</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Certificado de participação</li>
-            <li class="ticket-feature"><span class="feature-check">✦</span> Networking qualificado</li>
-            <li class="ticket-feature"><span class="feature-star">★</span> <strong>Prioridade no assento</strong></li>
-          </ul>
-          <div class="ticket-notice">
-            ⚠️ <strong>Exclusivo para parceiros com produção ativa.</strong>
-            Sujeito à validação pela equipe comercial.
-          </div>
-          <button class="btn-ticket btn-ticket-gold" onclick="selectTicket('parceiro')">
-            Garantir Vaga com Desconto →
-          </button>
-        </div>
+  <div class="divider"></div>
 
-      </div>
-    </div>
-  </section>
+  <!-- ═══════════════ URGÊNCIA ═══════════════ -->
+  <section class="urgency-section">
+    <div class="container">
+      <div class="urgency-inner reveal">
+        <div class="urgency-icon-wrap">⚡</div>
+        <div class="section-eyebrow" style="justify-content:center; margin-bottom:16px;">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Atenção</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">
+          O mercado não espera.<br>
+          <span class="gold-text-light">As vagas, também não.</span>
+        </h2>
+        <p class="section-sub" style="margin: 14px auto; text-align:center;">
+          Enquanto você lê isso, outros profissionais estão garantindo sua vaga.
+          Serão 120 pessoas — as últimas costumam ir em poucas horas.
+        </p>
+        <div style="display:flex; justify-content:center; margin-top:28px;">
+          <button class="btn-primary" onclick="scrollToForm()">
+            Garantir Minha Vaga Agora →
+          </button>
+        </div>
+        <div class="urgency-tags">
+          <div class="urgency-tag">Vagas quase esgotadas</div>
+          <div class="urgency-tag">30/05 — data confirmada</div>
+          <div class="urgency-tag">Sem transmissão online</div>
+          <div class="urgency-tag">Conteúdo exclusivo presencial</div>
+          <div class="urgency-tag">Sem repetição</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section class="urgency-section">
-    <div class="container">
-      <div class="urgency-inner reveal">
-        <div class="urgency-icon-wrap">⚡</div>
-        <div class="section-eyebrow" style="justify-content:center; margin-bottom:16px;">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Atenção</span>
-          <span class="eyebrow-line"></span>
-        </div>
-        <h2 class="section-title">
-          O mercado não espera.<br>
-          <span class="gold-text-light">As vagas, também não.</span>
-        </h2>
-        <p class="section-sub" style="margin: 14px auto; text-align:center;">
-          Enquanto você lê isso, outros profissionais estão garantindo sua vaga.
-          Serão 120 pessoas — as últimas costumam ir em poucas horas.
-        </p>
-        <div style="display:flex; justify-content:center; margin-top:28px;">
-          <button class="btn-primary" onclick="scrollToForm()">
-            Garantir Minha Vaga Agora →
-          </button>
-        </div>
-        <div class="urgency-tags">
-          <div class="urgency-tag">Vagas quase esgotadas</div>
-          <div class="urgency-tag">30/05 — data confirmada</div>
-          <div class="urgency-tag">Sem transmissão online</div>
-          <div class="urgency-tag">Conteúdo exclusivo presencial</div>
-          <div class="urgency-tag">Sem repetição</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ═══════════════ LOCAL ═══════════════ -->
+  <section id="local" class="location-section">
+    <div class="container">
+      <div class="reveal text-center">
+        <div class="section-eyebrow" style="justify-content:center;">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Local do Evento</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">
+          Um ambiente à <span class="gold-text">altura</span> do conteúdo
+        </h2>
+      </div>
+      <div class="location-grid">
+        <div class="reveal">
+          <div class="location-hotel">Majestic Palace Hotel</div>
+          <div class="location-address">
+            Av. Jorn. Rubéns de Arruda Ramos, 2746<br>
+            Centro · Florianópolis — SC
+          </div>
+          <div class="location-info-list">
+            <div class="location-info-item">
+              <div class="location-info-icon">📅</div>
+              30 de Maio de 2026
+            </div>
+            <div class="location-info-item">
+              <div class="location-info-icon">🕘</div>
+              Abertura às 09h00
+            </div>
+            <div class="location-info-item">
+              <div class="location-info-icon">👥</div>
+              Capacidade: 120 pessoas
+            </div>
+            <div class="location-info-item">
+              <div class="location-info-icon">🅿️</div>
+              Estacionamento disponível
+            </div>
+            <div class="location-info-item">
+              <div class="location-info-icon">☕</div>
+              Coffee break incluso
+            </div>
+          </div>
+        </div>
+        <div class="map-container reveal reveal-delay-2">
+          <iframe
+            src="https://maps.google.com/maps?q=Av.+Jorn.+Rub%C3%A9ns+de+Arruda+Ramos,+2746,+Centro,+Florian%C3%B3polis,+SC,+Brasil&output=embed&z=16"
+            allowfullscreen="" loading="lazy" title="Localização do Evento">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section id="local" class="location-section">
-    <div class="container">
-      <div class="reveal text-center">
-        <div class="section-eyebrow" style="justify-content:center;">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Local do Evento</span>
-          <span class="eyebrow-line"></span>
-        </div>
-        <h2 class="section-title">
-          Um ambiente à <span class="gold-text">altura</span> do conteúdo
-        </h2>
-      </div>
-      <div class="location-grid">
-        <div class="reveal">
-          <div class="location-hotel">Majestic Palace Hotel</div>
-          <div class="location-address">
-            Av. Jorn. Rubéns de Arruda Ramos, 2746<br>
-            Centro · Florianópolis — SC
-          </div>
-          <div class="location-info-list">
-            <div class="location-info-item">
-              <div class="location-info-icon">📅</div>
-              30 de Maio de 2026
-            </div>
-            <div class="location-info-item">
-              <div class="location-info-icon">🕘</div>
-              Abertura às 09h00
-            </div>
-            <div class="location-info-item">
-              <div class="location-info-icon">👥</div>
-              Capacidade: 120 pessoas
-            </div>
-            <div class="location-info-item">
-              <div class="location-info-icon">🅿️</div>
-              Estacionamento disponível
-            </div>
-            <div class="location-info-item">
-              <div class="location-info-icon">☕</div>
-              Coffee break incluso
-            </div>
-          </div>
-        </div>
-        <div class="map-container reveal reveal-delay-2">
-          <iframe
-            src="https://maps.google.com/maps?q=Av.+Jorn.+Rub%C3%A9ns+de+Arruda+Ramos,+2746,+Centro,+Florian%C3%B3polis,+SC,+Brasil&output=embed&z=16"
-            allowfullscreen="" loading="lazy" title="Localização do Evento">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ═══════════════ FAQ ═══════════════ -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="reveal text-center">
+        <div class="section-eyebrow" style="justify-content:center;">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Dúvidas Frequentes</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">Perguntas <span class="gold-text-soft">frequentes</span></h2>
+      </div>
+      <div class="faq-list" id="faq-list">
+        <!-- JS injected -->
+      </div>
+    </div>
+  </section>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-    <section id="faq" class="faq-section">
-    <div class="container">
-      <div class="reveal text-center">
-        <div class="section-eyebrow" style="justify-content:center;">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Dúvidas Frequentes</span>
-          <span class="eyebrow-line"></span>
-        </div>
-        <h2 class="section-title">Perguntas <span class="gold-text-soft">frequentes</span></h2>
-      </div>
-      <div class="faq-list" id="faq-list">
-              </div>
-    </div>
-  </section>
+  <!-- ═══════════════ FORMULÁRIO ═══════════════ -->
+  <section id="inscricao" class="form-section">
+    <div class="container">
+      <div class="form-container">
 
-  <div class="divider"></div>
+        <div class="reveal text-center" style="margin-bottom: 36px;">
+          <div class="section-eyebrow" style="justify-content:center;">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">Inscrição</span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title">Reserve sua vaga.<br><span class="gold-text">Agora.</span></h2>
+          <p class="section-sub" style="margin:0 auto;">Formulário rápido. Nossa equipe entra em contato em até 24h via WhatsApp.</p>
+        </div>
 
-    <section id="inscricao" class="form-section">
-    <div class="container">
-      <div class="form-container">
+        <div class="form-card reveal" id="form-card">
 
-        <div class="reveal text-center" style="margin-bottom: 36px;">
-          <div class="section-eyebrow" style="justify-content:center;">
-            <span class="eyebrow-line"></span>
-            <span class="eyebrow-text">Inscrição</span>
-            <span class="eyebrow-line"></span>
-          </div>
-          <h2 class="section-title">Reserve sua vaga.<br><span class="gold-text">Agora.</span></h2>
-          <p class="section-sub" style="margin:0 auto;">Formulário rápido. Nossa equipe entra em contato em até 24h via WhatsApp.</p>
-        </div>
+          <div id="form-area">
+            <div class="form-header">
+              <div class="form-header-title">Garanta sua vaga</div>
+              <div class="form-header-sub">Preencha seus dados. Nossa equipe confirmará via WhatsApp em até 24h.</div>
+            </div>
 
-        <div class="form-card reveal" id="form-card">
+            <form id="purchase-form" novalidate>
+              <div class="form-fields">
 
-          <div id="form-area">
-            <div class="form-header">
-              <div class="form-header-title">Garanta sua vaga</div>
-              <div class="form-header-sub">Preencha seus dados. Nossa equipe confirmará via WhatsApp em até 24h.</div>
-            </div>
+                <div class="form-group col-span-2">
+                  <label class="form-label" for="f-name">Nome Completo *</label>
+                  <input class="form-input" id="f-name" name="name" required placeholder="Seu nome completo" />
+                </div>
 
-            <form id="purchase-form" novalidate>
-              <div class="form-fields">
+                <div class="form-group">
+                  <label class="form-label" for="f-whatsapp">WhatsApp *</label>
+                  <input class="form-input" id="f-whatsapp" name="whatsapp" required placeholder="(48) 99999-9999" />
+                </div>
 
-                <div class="form-group col-span-2">
-                  <label class="form-label" for="f-name">Nome Completo *</label>
-                  <input class="form-input" id="f-name" name="name" required placeholder="Seu nome completo" />
-                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-email">E-mail *</label>
+                  <input class="form-input" id="f-email" name="email" type="email" required placeholder="seu@email.com" />
+                </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="f-whatsapp">WhatsApp *</label>
-                  <input class="form-input" id="f-whatsapp" name="whatsapp" required placeholder="(48) 99999-9999" />
-                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-company">Empresa / Promotora *</label>
+                  <input class="form-input" id="f-company" name="company" required placeholder="Nome da empresa" />
+                </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="f-email">E-mail *</label>
-                  <input class="form-input" id="f-email" name="email" type="email" required placeholder="seu@email.com" />
-                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-city">Cidade / Estado *</label>
+                  <input class="form-input" id="f-city" name="city" required placeholder="Ex: Florianópolis - SC" />
+                </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="f-company">Empresa / Promotora *</label>
-                  <input class="form-input" id="f-company" name="company" required placeholder="Nome da empresa" />
-                </div>
+                <div class="form-group col-span-2">
+                  <label class="form-label" for="f-cpf">CPF ou CNPJ *</label>
+                  <input class="form-input" id="f-cpf" name="cpf" required placeholder="000.000.000-00" />
+                </div>
 
-                <div class="form-group">
-                  <label class="form-label" for="f-city">Cidade / Estado *</label>
-                  <input class="form-input" id="f-city" name="city" required placeholder="Ex: Florianópolis - SC" />
-                </div>
+                <div class="ticket-select-wrap">
+                  <span class="ticket-select-label">Selecione seu ingresso *</span>
+                  <div class="ticket-options">
+                    <div class="ticket-option" id="opt-geral" onclick="selectTicketRadio('geral')">
+                      <div class="ticket-option-left">
+                        <div class="radio-indicator" id="dot-geral"></div>
+                        <div>
+                          <div class="ticket-option-name">Público Geral</div>
+                          <div class="ticket-option-desc">Aberto ao mercado</div>
+                        </div>
+                      </div>
+                      <div class="ticket-option-price">R$ 297,90</div>
+                    </div>
+                    <div class="ticket-option selected" id="opt-parceiro" onclick="selectTicketRadio('parceiro')">
+                      <div class="ticket-option-left">
+                        <div class="radio-indicator on" id="dot-parceiro"></div>
+                        <div>
+                          <div class="ticket-option-name">Parceiro Agilizza</div>
+                          <div class="ticket-option-desc">Produção ativa — sujeito à validação</div>
+                        </div>
+                      </div>
+                      <div class="ticket-option-price">R$ 167,00</div>
+                    </div>
+                  </div>
+                  <input type="hidden" id="selected-ticket" name="ticket" value="parceiro" />
+                </div>
 
-                <div class="form-group col-span-2">
-                  <label class="form-label" for="f-cpf">CPF ou CNPJ *</label>
-                  <input class="form-input" id="f-cpf" name="cpf" required placeholder="000.000.000-00" />
-                </div>
+                <div class="form-checkbox-row">
+                  <input type="checkbox" class="form-checkbox" id="is-partner" onchange="togglePartnerField()" />
+                  <label class="form-checkbox-label" for="is-partner">Sou parceiro Agilizza com produção ativa</label>
+                </div>
 
-                <div class="ticket-select-wrap">
-                  <span class="ticket-select-label">Selecione seu ingresso *</span>
-                  <div class="ticket-options">
-                    <div class="ticket-option" id="opt-geral" onclick="selectTicketRadio('geral')">
-                      <div class="ticket-option-left">
-                        <div class="radio-indicator" id="dot-geral"></div>
-                        <div>
-                          <div class="ticket-option-name">Público Geral</div>
-                          <div class="ticket-option-desc">Aberto ao mercado</div>
-                        </div>
-                      </div>
-                      <div class="ticket-option-price">R$ 297,90</div>
-                    </div>
-                    <div class="ticket-option selected" id="opt-parceiro" onclick="selectTicketRadio('parceiro')">
-                      <div class="ticket-option-left">
-                        <div class="radio-indicator on" id="dot-parceiro"></div>
-                        <div>
-                          <div class="ticket-option-name">Parceiro Agilizza</div>
-                          <div class="ticket-option-desc">Produção ativa — sujeito à validação</div>
-                        </div>
-                      </div>
-                      <div class="ticket-option-price">R$ 167,00</div>
-                    </div>
-                  </div>
-                  <input type="hidden" id="selected-ticket" name="ticket" value="parceiro" />
-                </div>
+                <div class="partner-code-wrap form-group" id="partner-code-wrap">
+                  <label class="form-label" for="f-code">Código do Parceiro (opcional)</label>
+                  <input class="form-input" id="f-code" name="partnerCode" placeholder="Ex: AGZ-2024" />
+                </div>
 
-                <div class="form-checkbox-row">
-                  <input type="checkbox" class="form-checkbox" id="is-partner" onchange="togglePartnerField()" />
-                  <label class="form-checkbox-label" for="is-partner">Sou parceiro Agilizza com produção ativa</label>
-                </div>
+                <div class="ticket-notice-form">
+                  ⚠️ O valor de parceiro é <strong>exclusivo para quem tem produção ativa</strong>.
+                  Nossa equipe validará antes de confirmar.
+                </div>
 
-                <div class="partner-code-wrap form-group" id="partner-code-wrap">
-                  <label class="form-label" for="f-code">Código do Parceiro (opcional)</label>
-                  <input class="form-input" id="f-code" name="partnerCode" placeholder="Ex: AGZ-2024" />
-                </div>
+                <div class="error-msg" id="form-error"></div>
 
-                <div class="ticket-notice-form">
-                  ⚠️ O valor de parceiro é <strong>exclusivo para quem tem produção ativa</strong>.
-                  Nossa equipe validará antes de confirmar.
-                </div>
+              </div>
 
-                <div class="error-msg" id="form-error"></div>
+              <button type="submit" class="btn-submit" id="submit-btn">
+                Confirmar Inscrição →
+              </button>
+            </form>
+          </div>
 
-              </div>
+          <div id="success-area" style="display:none;" class="success-state">
+            <span class="success-icon">🎉</span>
+            <div class="success-title">Inscrição Recebida!</div>
+            <div class="success-body">
+              Em breve nossa equipe entrará em contato via WhatsApp para confirmar
+              sua vaga e enviar o link de pagamento seguro.<br><br>
+              <strong>Portabilidade na Prática 2.0 — 30/05 às 09h</strong><br>
+              Majestic Palace Hotel · Florianópolis - SC
+            </div>
+          </div>
 
-              <button type="submit" class="btn-submit" id="submit-btn">
-                Confirmar Inscrição →
-              </button>
-            </form>
-          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div id="success-area" style="display:none;" class="success-state">
-            <span class="success-icon">🎉</span>
-            <div class="success-title">Inscrição Recebida!</div>
-            <div class="success-body">
-              Em breve nossa equipe entrará em contato via WhatsApp para confirmar
-              sua vaga e enviar o link de pagamento seguro.<br><br>
-              <strong>Portabilidade na Prática 2.0 — 30/05 às 09h</strong><br>
-              Majestic Palace Hotel · Florianópolis - SC
-            </div>
-          </div>
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="footer-logo">Agilizza <span>Promotora</span></div>
+    <div class="footer-info">Portabilidade na Prática 2.0 + Compra de Dívida</div>
+    <div class="footer-info">30 de Maio de 2026 &bull; Majestic Palace Hotel &bull; Florianópolis - SC</div>
+    <div class="footer-sep"></div>
+    <div class="footer-copy">&copy; 2026 Agilizza Promotora. Todos os direitos reservados.</div>
+  </footer>
 
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <footer>
-    <div class="footer-logo">Agilizza <span>Promotora</span></div>
-    <div class="footer-info">Portabilidade na Prática 2.0 + Compra de Dívida</div>
-    <div class="footer-info">30 de Maio de 2026 • Majestic Palace Hotel • Florianópolis - SC</div>
-    <div class="footer-sep"></div>
-    <div class="footer-copy">© 2026 Agilizza Promotora. Todos os direitos reservados.</div>
-  </footer>
-
-  <script src="config/app.js"></script>
+  <script src="config/app.js"></script>
 </body>
 </html>
