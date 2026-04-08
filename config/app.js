@@ -39,12 +39,12 @@ const SPEAKERS = [
     city: 'Florianópolis - SC', 
     desc: 'Especialista em vendas por telefone e performance sob pressão. Construiu um time com mais de 50 vendedores ativos e já treinou mais de 200 profissionais do zero à alta performance.<br><br>Vivência prática em metas agressivas: seu maior vendedor já atingiu R$ 1.000.000,00 em vendas de cartão consignado num único mês.' 
   },
-  { 
-    initials: 'RM', 
-    name: 'Ricardo Matos',   
-    company: 'Agilizza Promotora',  
-    city: 'Florianópolis - SC', 
-    desc: 'Especialista em portabilidade de crédito consignado com mais de 15 anos no mercado. Responsável por operações superiores a R$ 50M/ano.' 
+  {
+    initials: 'FK',
+    name: 'Fernando Koneski',
+    company: '',
+    city: 'Florianópolis - SC',
+    desc: 'Especialista em vendas e estratégias no mercado financeiro, com foco em crédito consignado e desenvolvimento de equipes de alta performance.<br><br>Responsável por estruturar operações comerciais com foco em previsibilidade e escala. Já impulsionou resultados por meio de método, disciplina e gestão eficiente.'
   },
   { 
     initials: 'FO', 
