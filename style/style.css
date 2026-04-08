@@ -888,6 +888,7 @@ img.speaker-avatar {
   color: var(--gold-600);
   letter-spacing: .5px;
   margin-bottom: 4px;
+  min-height: 1.2em;
 }
 .speaker-location {
   font-size: .7rem;
