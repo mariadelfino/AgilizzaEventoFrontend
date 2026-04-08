@@ -252,28 +252,19 @@ function selectTicket(type) {
 // ----------------------------------------------------------
 function selectTicketRadio(type) {
   ['geral', 'parceiro'].forEach(function(t) {
-    var radio = document.getElementById('opt-' + t); 
+    var radio = document.getElementById('opt-' + t);
     var dot   = document.getElementById('dot-' + t);
     if (radio) radio.classList.toggle('selected', t === type);
-    if (dot)   dot.classList.toggle('on', t === type); 
+    if (dot)   dot.classList.toggle('on', t === type);
   });
   var input = document.getElementById('selected-ticket');
   if (input) input.value = type;
 
-  // Mostra ou oculta o campo de código automaticamente
-  var isPartnerCheckbox = document.getElementById('is-partner');
-  if (isPartnerCheckbox) {
-    isPartnerCheckbox.checked = (type === 'parceiro');
-    togglePartnerField();
-  }
-}
-// ----------------------------------------------------------
-// CAMPO CÓDIGO PARCEIRO
-// ----------------------------------------------------------
-function togglePartnerField() {
-  var wrap    = document.getElementById('partner-code-wrap');
-  var checked = document.getElementById('is-partner').checked;
-  if (wrap) wrap.style.display = checked ? 'block' : 'none';
+  var wrap = document.getElementById('partner-code-wrap');
+  if (wrap) wrap.style.display = (type === 'parceiro') ? 'block' : 'none';
+
+  var codeInput = document.getElementById('f-code');
+  if (codeInput) codeInput.value = '';
 }
 // ----------------------------------------------------------
 // TICKER ANIMADO

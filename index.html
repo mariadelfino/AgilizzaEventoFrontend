@@ -465,9 +465,9 @@
                 <div class="ticket-select-wrap">
                   <span class="ticket-select-label">Selecione seu ingresso *</span>
                   <div class="ticket-options">
-                    <div class="ticket-option" id="opt-geral" onclick="selectTicketRadio('geral')">
+                    <div class="ticket-option selected" id="opt-geral" onclick="selectTicketRadio('geral')">
                       <div class="ticket-option-left">
-                        <div class="radio-indicator" id="dot-geral"></div>
+                        <div class="radio-indicator on" id="dot-geral"></div>
                         <div>
                           <div class="ticket-option-name">Público Geral</div>
                           <div class="ticket-option-desc">Aberto ao mercado</div>
@@ -475,9 +475,9 @@
                       </div>
                       <div class="ticket-option-price">R$ 297,90</div>
                     </div>
-                    <div class="ticket-option selected" id="opt-parceiro" onclick="selectTicketRadio('parceiro')">
+                    <div class="ticket-option" id="opt-parceiro" onclick="selectTicketRadio('parceiro')">
                       <div class="ticket-option-left">
-                        <div class="radio-indicator on" id="dot-parceiro"></div>
+                        <div class="radio-indicator" id="dot-parceiro"></div>
                         <div>
                           <div class="ticket-option-name">Parceiro Agilizza</div>
                           <div class="ticket-option-desc">Produção ativa — sujeito à validação</div>
@@ -486,16 +486,11 @@
                       <div class="ticket-option-price">R$ 167,00</div>
                     </div>
                   </div>
-                  <input type="hidden" id="selected-ticket" name="ticket" value="parceiro" />
+                  <input type="hidden" id="selected-ticket" name="ticket" value="geral" />
                 </div>
 
-                <div class="form-checkbox-row">
-                  <input type="checkbox" class="form-checkbox" id="is-partner" onchange="togglePartnerField()" />
-                  <label class="form-checkbox-label" for="is-partner">Sou parceiro Agilizza com produção ativa</label>
-                </div>
-
-                <div class="partner-code-wrap form-group" id="partner-code-wrap">
-                  <label class="form-label" for="f-code">Código do Parceiro (opcional)</label>
+                <div class="partner-code-wrap form-group" id="partner-code-wrap" style="display:none;">
+                  <label class="form-label" for="f-code">Código do Parceiro *</label>
                   <input class="form-input" id="f-code" name="partnerCode" placeholder="Ex: AGZ-2024" />
                 </div>
 
