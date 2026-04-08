@@ -47,13 +47,6 @@ const SPEAKERS = [
     desc: 'Especialista em Portabilidade INSS e autoridade no assunto. Referência nacional no segmento, à frente de uma das operações mais sólidas do mercado de crédito consignado.'
   },
   {
-    initials: 'FO',
-    name: 'Felipe Oliveira',
-    company: 'SIAPE Experts',
-    city: 'Brasília - DF',
-    desc: 'Autoridade em crédito SIAPE e estratégias para servidores públicos. Criador de metodologias de conversão aplicadas por grandes redes.'
-  },
-  {
     initials: 'RO',
     name: 'Robson',
     company: 'Proprietário da Acerto Promotora',
