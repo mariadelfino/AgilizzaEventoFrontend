@@ -40,7 +40,7 @@ const SPEAKERS = [
     desc: 'Especialista em vendas por telefone e performance sob pressão. Construiu um time com mais de 50 vendedores ativos e já treinou mais de 200 profissionais do zero à alta performance.<br><br>Vivência prática em metas agressivas: seu maior vendedor já atingiu R$ 1.000.000,00 em vendas de cartão consignado num único mês.' 
   },
   {
-    initials: 'FK',
+    image: 'style/fernando_foto.png', 
     name: 'Fernando Koneski',
     company: '',
     city: 'Florianópolis - SC',
