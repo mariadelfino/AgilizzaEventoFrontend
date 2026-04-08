@@ -32,26 +32,33 @@ const SPEAKERS = [
     city: 'Florianópolis - SC', 
     desc: 'Especialista em gestão, liderança e vendas. Responsável por estruturar empresas que saem do caos para crescimento previsível. Já contribuiu para mais de R$ 1 BILHÃO em vendas.<br><br><strong>Assunto da palestra:</strong> Bater meta não é sorte. É método.' 
   },
-  { 
-    image: 'style/neverson.png', 
-    name: 'Neverson Knies', 
-    company: 'Fundador da Gaúcha Cred', 
-    city: 'Florianópolis - SC', 
-    desc: 'Especialista em vendas por telefone e performance sob pressão. Construiu um time com mais de 50 vendedores ativos e já treinou mais de 200 profissionais do zero à alta performance.<br><br>Vivência prática em metas agressivas: seu maior vendedor já atingiu R$ 1.000.000,00 em vendas de cartão consignado num único mês.' 
+  {
+    image: 'style/neverson.png',
+    name: 'Neverson Knies',
+    company: 'Proprietário da Gaúcha Cred',
+    city: 'Santa Maria - RS',
+    desc: 'Um dos maiores vendedores de cartão do Brasil. Vende mais de R$ 3 milhões em cartão novo por mês e construiu um time de alta performance com resultados consistentes em todo o país.'
   },
   {
     image: 'style/fernando_foto.png',
     name: 'Fernando Koneski',
-    company: '',
-    city: 'Florianópolis - SC',
-    desc: 'Especialista em vendas e estratégias no mercado financeiro, com foco em crédito consignado e desenvolvimento de equipes de alta performance.<br><br>Responsável por estruturar operações comerciais com foco em previsibilidade e escala. Já impulsionou resultados por meio de método, disciplina e gestão eficiente.'
+    company: 'Proprietário do Grupo Egel',
+    city: 'Lages - SC',
+    desc: 'Especialista em Portabilidade INSS e autoridade no assunto. Referência nacional no segmento, à frente de uma das operações mais sólidas do mercado de crédito consignado.'
   },
-  { 
-    initials: 'FO', 
-    name: 'Felipe Oliveira', 
-    company: 'SIAPE Experts',       
-    city: 'Brasília - DF',      
-    desc: 'Autoridade em crédito SIAPE e estratégias para servidores públicos. Criador de metodologias de conversão aplicadas por grandes redes.' 
+  {
+    initials: 'FO',
+    name: 'Felipe Oliveira',
+    company: 'SIAPE Experts',
+    city: 'Brasília - DF',
+    desc: 'Autoridade em crédito SIAPE e estratégias para servidores públicos. Criador de metodologias de conversão aplicadas por grandes redes.'
+  },
+  {
+    initials: 'RO',
+    name: 'Robson',
+    company: 'Proprietário da Acerto Promotora',
+    city: 'Florianópolis - SC',
+    desc: 'Especialista em vendas do convênio SIAPE, à frente de uma das maiores promotoras do Brasil no segmento. Referência em estruturação de equipes e crescimento escalável no crédito público.'
   }
 ];
 
