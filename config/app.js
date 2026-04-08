@@ -108,7 +108,7 @@ function renderSpeakers() {
       <div class="speaker-card reveal" style="transition-delay:${i * 0.1}s">
         ${avatarHTML}
         <div class="speaker-name">${s.name}</div>
-        <div class="speaker-title">${s.company}</div>
+        <div class="speaker-title">${s.company || '&nbsp;'}</div>
         ${locationHTML}
         <div class="speaker-bio">${s.desc}</div>
       </div>
