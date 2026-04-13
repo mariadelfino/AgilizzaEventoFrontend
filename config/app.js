@@ -29,7 +29,7 @@ const SPEAKERS = [
     image: 'style/anacarla_foto.png', 
     name: 'Ana Carla Almeida', 
     company: 'Sócia do Grupo Real', 
-    city: 'Florianópolis - SC', 
+    city: 'Tubarão - SC', 
     desc: 'Especialista em gestão, liderança e vendas. Responsável por estruturar empresas que saem do caos para crescimento previsível. Já contribuiu para mais de R$ 1 BILHÃO em vendas.<br><br><strong>Assunto da palestra:</strong> Bater meta não é sorte. É método.' 
   },
   {
